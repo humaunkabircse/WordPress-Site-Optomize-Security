@@ -1,0 +1,14 @@
+/*If you want our code to be displayed first, you can add a priority to the function. Have it updated and use this instead:*/
+
+add_action('wp_head', 'add_header_code', 5);
+function add_header_code(){
+?>
+    <link rel="preload" href="appropriate url inserted here" as="font">
+<?php
+};
+
+
+OR
+
+/*Directly edit the header.php   https://wp-rocket.me/blog/font-preloading-best-practices/ */
+<link rel="preload" href="fonts/cicle_fina-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
