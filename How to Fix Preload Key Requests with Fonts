@@ -17,3 +17,7 @@ OR
 OR
 /*Inserting Link Tags in Header*/
 <link rel="preload" href="Font URL Showing in PageSpeed" as="font" crossorigin="anonymous">
+
+OR
+/*Inserting Link Tags in Header*/
+<link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin>
