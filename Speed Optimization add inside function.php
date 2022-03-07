@@ -47,6 +47,17 @@ return "$url' defer ";
 add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 
 
+//how to defer javascript without admin
+if (!(is_admin() )) {
+	function defer_parsing_of_js ( $url ) {
+		if ( FALSE === strpos( $url, '.js' ) ) return $url;
+		if ( strpos( $url, 'jquery.js' ) ) return $url;
+		return "$url' defer='defer";
+	}
+	add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+}
+
+
 
 
 https://geekflare.com/wordpress-performance-optimization-without-plugin/
