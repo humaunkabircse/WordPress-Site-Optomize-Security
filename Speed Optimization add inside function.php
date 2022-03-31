@@ -1,4 +1,22 @@
  //Speed Optimization
+
+///Dequeue Style
+function kabir_deque_style () {
+    if( ! is_page("n-my-account")){
+         wp_dequeue_style("digits-login-style");
+    }
+    
+    
+    wp_dequeue_style("woo_discount_pro_style");
+    wp_dequeue_style("wpsms-subscribe");
+}
+
+if ( wp_is_mobile())
+{
+add_action('wp_print_styles','kabir_deque_style');
+}
+
+
 ///Dequeue Style
 function removeunusedfile_css(){
     if(!is_product()){
