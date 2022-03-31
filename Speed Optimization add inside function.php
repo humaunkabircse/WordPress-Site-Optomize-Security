@@ -8,10 +8,7 @@ function removeunusedfile_css(){
       wp_dequeue_style("ct.sizeguide.icon.css");
       wp_dequeue_style("ct.sizeguide.fontawesome.css");
       wp_dequeue_style("ct.sizeguide.fontawesome.iconfield.css");
-    }
-  
-
-    
+    }    
 }
 add_action("wp_print_styles",removeunusedfile_css);
 
